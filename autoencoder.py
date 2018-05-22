@@ -111,7 +111,7 @@ def prepare_image(image, target):
     if image.mode != "L":
         image = image.convert("L")
 
-    # resize the input image and preprocess it
+    # resize the input image
     image = image.resize(target)
     image = img_to_array(image).astype("float32")/255.
     return image
